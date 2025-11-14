@@ -7,9 +7,9 @@ import { sanityClient } from "@/sanity/client";
 
 
 const builder = imageUrlBuilder(sanityClient);
-export const urlFor = (source) => builder.image(source).auto("format").fit("max");
+export const urlFor = (source: any) => builder.image(source).auto("format").fit("max");
 
-export default function HomeClient({ data }) {
+export default function HomeClient({ data }: { data: any[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggleAccordion = (index: number) => {
@@ -26,7 +26,7 @@ export default function HomeClient({ data }) {
         <div className="main-title">Feel the Craft</div>
       </div>
 
-      {data.map((beer, index) => (
+      {data.map((beer: any, index: number) => (
         <div className="accordion-item" key={beer.beerName}>
           
           {/* HEADER NA KOJI SE KLIKĆE */}
