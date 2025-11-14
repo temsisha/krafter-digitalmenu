@@ -1,26 +1,166 @@
-@import "tailwindcss";
+@font-face {
+        font-family: 'Gilroy';
+        src: url('/fonts/Gilroy-Light.otf') format('opentype');
+        font-weight: 300;
+        }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+        @font-face {
+        font-family: 'Gilroy';
+        src: url('/fonts/Gilroy-ExtraBold.otf') format('opentype');
+        font-weight: 400;
+        } 
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+        body {
+            font-family: 'Gilroy', sans-serif !important;
+            background: url("/mainBg.png");
+            color: #fff;
+            min-height: 100vh;
+        }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+        .container {
+            max-width: 430px;
+            margin: 0 auto;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .header {
+            position: relative;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .tagline {
+            font-size: 18px;
+            font-weight: lighter;
+        }
+
+        .main-title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .accordion-item {
+            /* border-bottom: 1px solid #333; */
+            background: rgba(255, 255, 255, 0.10);
+            margin-bottom: 5px;
+        }
+
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            padding: 20px 20px 20px 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+            position: relative;
+        }
+
+        .accordion-header:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .beer-logo {
+            width: 98px;
+            height: 98px;
+            border-radius: 50%;
+            margin-right: 10px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 12px;
+            border: 3px solid;
+        }
+
+        .beer-info {
+            flex: 1;
+        }
+
+        .beer-category {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        /* .beer-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        } */
+
+        .beer-specs {
+            font-size: 16px;
+            font-weight: lighter;
+        }
+
+        .status {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .out-of-stock {
+            color: #ffd700;
+        }
+
+        .on-tap {
+            color: #4CC615;
+        }
+
+        .price {
+            color: #fff;
+            font-size: 20px;
+            align-self: baseline;
+        }
+
+        .more-btn {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 14px;
+            text-transform: lowercase;
+            font-weight: lighter;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .accordion-content.active {
+            max-height: 500px;
+        }
+
+        .beer-description {
+            padding: 20px;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        .beer-description p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: lighter;
+        }
+
+        .beer-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        .location {
+            opacity: 0.7;
+            font-size: 13px;
+        }
