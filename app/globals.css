@@ -69,10 +69,18 @@
             background: rgba(255, 255, 255, 0.05);
         }
 
+        .beer-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
         .beer-logo {
             width: 98px;
             height: 98px;
             border-radius: 50%;
+            overflow: hidden;
             margin-right: 10px;
             flex-shrink: 0;
             display: flex;
