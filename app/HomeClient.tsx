@@ -23,7 +23,10 @@ export default function HomeClient({ data }: { data: any[] }) {
           <img src="/appLogo.png" alt="appLogo" />
         </div>
         <div className="tagline">Taste the Hops</div>
-        <div className="main-title">Feel the Craft</div>
+        <div className="main-title-line">
+          <div className="main-title">Feel the Craft</div>
+          <div className="main-title-price">price</div>
+        </div>
       </div>
 
       {data.map((beer: any, index: number) => (

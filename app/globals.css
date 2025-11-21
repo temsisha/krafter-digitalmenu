@@ -66,9 +66,21 @@
             font-weight: lighter;
         }
 
+        .main-title-line {
+            display: flex;
+            justify-content:space-between;
+        }
+
         .main-title {
             font-size: 28px;
             font-weight: bold;
+        }
+
+        .main-title-price {
+            font-size: 18px;
+            font-weight: lighter;
+            align-self: end;
+            margin-bottom: 5px;
         }
 
         .accordion-item {
