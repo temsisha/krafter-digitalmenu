@@ -74,6 +74,7 @@ export default function HomeClient({ data }: { data: any[] }) {
                   IPA - New England / Hazy<br />
                   6.4% ABV | 50 IBU | 10% EKS
                 </div>
+                <span className="separator"></span>
               </div>
              <PortableText value={beer.beerDetails} />
             </div>
