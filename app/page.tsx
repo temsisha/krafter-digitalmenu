@@ -1,7 +1,7 @@
 import { sanityClient } from "@/sanity/client";
 import HomeClient from "./HomeClient";
 
-const POSTS_QUERY = `*[_type == "beers"]|order(publishedAt desc)[0...12]{
+const POSTS_QUERY = `*[_type == "beers"]|order(publishedAt desc){
   beerName,
   beerType,
   beerDetails,
