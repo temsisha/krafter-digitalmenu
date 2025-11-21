@@ -22,13 +22,29 @@
 
         body {
             font-family: 'Gilroy', sans-serif !important;
-            background: url("/mainBg.png") no-repeat;
-            background-attachment: fixed;
+            /* UKLONITI OVO: background: url("/mainBg.png"); */ 
             color: #fff;
             min-height: 100vh;
+            /* Dodati: */
+            position: relative; /* Bitno za z-index */
+        }
+
+        /* NOVI STILOVI ZA FIKSIRANU POZADINU */
+        .fixed-bg-image {
+            position: fixed; /* Ključno: fiksira ga u viewportu */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Mora biti ispod ostalog sadržaja */
+            background: url("/mainBg.png") no-repeat center center;
+            background-size: cover; /* Da pokrije ceo ekran */
         }
 
         .container {
+            /* Osigurava da se sadržaj nalazi iznad fiksirane pozadine */
+            position: relative; 
+            z-index: 1; 
             max-width: 430px;
             margin: 0 auto;
             border-radius: 8px;
@@ -162,7 +178,7 @@
         }
 
         .accordion-content.active {
-            max-height: 500px;
+           max-height: 2000px;
         }
 
         .beer-description {
