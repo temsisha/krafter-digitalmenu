@@ -37,7 +37,7 @@
             width: 100%;
             height: 100%;
             z-index: -1; /* Mora biti ispod ostalog sadržaja */
-            background: url("/mainBg.png") no-repeat center center;
+            /* background: url("/mainBg.png") no-repeat center center; */
             background-size: cover; /* Da pokrije ceo ekran */
         }
 
