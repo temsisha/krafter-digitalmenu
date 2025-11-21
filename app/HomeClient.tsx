@@ -71,8 +71,8 @@ export default function HomeClient({ data }: { data: any[] }) {
               <div className="beer-info">
                 <div className="beer-category">{beer.beerName}</div>
                 <div className="beer-specs">
-                  IPA - New England / Hazy<br />
-                  6.4% ABV | 50 IBU | 10% EKS
+                  {beer.beerType}<br />
+                  {beer.beerABV} ABV | {beer.beerIBU} IBU
                 </div>
                 <span className="separator"></span>
               </div>
