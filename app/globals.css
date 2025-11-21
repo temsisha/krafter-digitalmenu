@@ -22,7 +22,8 @@
 
         body {
             font-family: 'Gilroy', sans-serif !important;
-            background: url("/mainBg.png") center center / cover no-repeat fixed;
+            background: url("/mainBg.png") no-repeat;
+            background-attachment: fixed;
             color: #fff;
             min-height: 100vh;
         }
